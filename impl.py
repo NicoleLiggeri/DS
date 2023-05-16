@@ -6,7 +6,7 @@ from rdflib.plugins.stores.sparqlstore import SPARQLUpdateStore
 from sparql_dataframe import get 
 from utils.clean_str import remove_special_chars
 from json import load
-from utils.create_graph import create_Graph
+from utils.CreateGraph import create_Graph
 
 
 #NOTE: BLOCK DATA MODEL
