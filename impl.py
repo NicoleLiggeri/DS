@@ -725,7 +725,7 @@ class GenericQueryProcessor():
                 
 
         
-    def getEntitieswithTitle(self, title):
+    def getEntitiesWithTitle(self, title):
 
         graph_db = DataFrame()
         relational_db = DataFrame()
