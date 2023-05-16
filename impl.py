@@ -137,7 +137,7 @@ class QueryProcessor(Processor):
         return df
 
 
-class TriplestoreQueryProcessor(Processor):
+class TriplestoreQueryProcessor(QueryProcessor):
 
     def __init__(self):
         super().__init__()
@@ -841,20 +841,20 @@ class GenericQueryProcessor():
 
 
 
-grp_endpoint = "http://127.0.0.1:9999/blazegraph/sparql"
-qp = QueryProcessor()
+# grp_endpoint = "http://127.0.0.1:9999/blazegraph/sparql"
+# qp = QueryProcessor()
 
-qp.setDbPathOrUrl(RDF_DB_URL)
+# qp.setDbPathOrUrl(RDF_DB_URL)
 
-p = Processor()
-tqp = TriplestoreQueryProcessor()
-tqp.setDbPathOrUrl("http://127.0.0.1:9999/blazegraph/sparql")
-# print(qp.getEntityById('https://dl.ficlit.unibo.it/iiif/2/28429/canvas/p1'))
+# p = Processor()
+# tqp = TriplestoreQueryProcessor()
+# tqp.setDbPathOrUrl("http://127.0.0.1:9999/blazegraph/sparql")
+# # print(qp.getEntityById('https://dl.ficlit.unibo.it/iiif/2/28429/canvas/p1'))
 
-generic = GenericQueryProcessor()
-generic.addQueryProcessor(qp)
-generic.addQueryProcessor(p)
-generic.addQueryProcessor(tqp)
+# generic = GenericQueryProcessor()
+# generic.addQueryProcessor(qp)
+# generic.addQueryProcessor(p)
+# generic.addQueryProcessor(tqp)
 #print(generic.getEntityById('https://dl.ficlit.unibo.it/iiif/2/28429/canvas/p1'))
 #print(generic.getAllCanvases())
 
